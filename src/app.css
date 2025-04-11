@@ -1,0 +1,339 @@
+/* Only do the FLIP-style animations when no reduced-motion preference */
+@media (prefers-reduced-motion: no-preference) {
+	[style*='--tag'] {
+		view-transition-name: var(--tag);
+	}
+	
+}
+
+.detail {
+	margin-top: 80px;
+}
+
+.detail-image {
+	border-radius: 30px;
+}
+.detail-image img {
+	border-radius: 30px;
+}
+.satuan {
+	display: flex;
+	font-size: 10px;
+	color: var(--md-sys-color-subheadline);
+}
+.items-list {
+	background-color: var(--md-sys-color-surface-container-low);
+	border-radius: 12px;
+	color: var(--md-sys-color-on-surface);
+
+	box-shadow:
+		var(--md-sys-color-box-shadow-in) 0px 1px 2px 0px,
+		var(--md-sys-color-box-shadow-out) 0px 2px 6px 2px;
+}
+.uraian-barang {
+	color: var(--md-sys-color-on-surface);
+	margin-top: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.items-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 10px;
+}
+.item-list-image > img {
+	border-radius: 12px;
+}
+
+.label_satuan {
+	margin-right: 2px;
+	color: var(--md-sys-color-on-surface);
+}
+.image-detail {
+	border-radius: 25px;
+}
+.object-cover {
+	object-fit: cover;
+}
+body {
+	font-family: 'Roboto Flex Variable', sans-serif;
+	margin: 0;
+	background-color: var(--md-sys-color-background);
+	color: var(--md-sys-color-on-background);
+	font-size: 12px;
+}
+a {
+	cursor: default;
+	text-decoration: none;
+}
+.deskripsi {
+	margin-left: 10px;
+	margin-right: 10px;
+	color: var(--md-sys-color-on-surface-variant);
+}
+
+.detail {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 50px;
+}
+.home {
+	margin-top: 80px;
+	margin-bottom: 70px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.carousel {
+	border-radius: 30px;
+}
+.gambar {
+	border-radius: 30px;
+}
+.background-icon>svg {
+	fill: var(--md-sys-color-on-secondary-container);
+}
+
+.isi_footer_detail>svg {
+	fill: var(--md-sys-color-on-primary);
+}
+.label-nav {
+	margin-top: 1px;
+	color: var(--md-sys-color-on-secondary-container);
+}
+
+.background-icon {
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	border-radius: 25px;
+}
+a {
+	justify-items: center;
+	text-decoration: none;
+}
+
+.bottom-nav-list {
+	& a {
+		&[aria-current]:not([aria-current='false']) {
+			& .background-icon {
+				animation-duration: 0.5s;
+				transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+				animation-name: example;
+				background-color: var(--md-sys-color-secondary-container);
+			}
+			& .label-nav {
+				animation-name: nama-men;
+				animation-duration: 0.5s;
+				transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+@keyframes example {
+	from {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	to {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@keyframes nama-men {
+	from {
+		font-weight: normal;
+	}
+	to {
+		font-weight: bold;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
+}
+:root::view-transition-old(*),
+:root::view-transition-new(*) {
+
+  animation-duration: 1s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  
+}
+.chat-basket {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.header {
+	top: 0;
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	background-color: var(--md-sys-color-surface-container);
+	padding-top: 10px;
+	padding-bottom: 5px;
+	justify-content: space-between;
+	z-index: 100;
+	height: 54px;
+	pointer-events: auto;
+	object-fit: cover;
+}
+
+.header_container {
+	pointer-events: none;
+	z-index: 100 !important;
+}
+
+.footer {
+	bottom: 0;
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	gap: 20px;
+	background-color: var(--md-sys-color-surface-container);
+	padding-top: 10px;
+	padding-bottom: 5px;
+	z-index: 50;
+	pointer-events: auto;
+	object-fit: cover;
+
+}
+.blok {
+	bottom: 0;
+	height: 50px;
+	background-color: var(--md-sys-color-surface-container);
+	width: 100%;
+	position: fixed;
+}
+
+.bottom-nav {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+.info_produk {
+	color: var(--md-sys-color-on-background);
+	font-size: small;
+	text-align: justify;
+}
+.nutrisi {
+	color: var(--md-sys-color-on-background);
+	font-size: small;
+	text-align: justify;
+}
+.penyimpanan {
+	color: var(--md-sys-color-on-background);
+	font-size: small;
+	text-align: justify;
+	margin-left: 0;
+}
+.page {
+	margin: auto;
+	max-width: 500px;
+	background-color: var(--md-sys-color-background);
+	color: var(--md-sys-color-on-background);
+}
+.bottom-nav-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 33.333%;
+}
+:root {
+	color-scheme: light dark;
+	--md-sys-color-primary: light-dark(rgb(56, 105, 60), rgb(158, 212, 157));
+	--md-sys-color-surface-tint: light-dark(rgb(56, 105, 60), rgb(158 212 157));
+	--md-sys-color-on-primary: light-dark(rgb(255, 255, 255), rgb(4, 57, 18));
+	--md-sys-color-primary-container: light-dark(rgb(185, 240, 183), rgb(32, 80, 38));
+	--md-sys-color-on-primary-container: light-dark(rgb(32, 80, 38), rgb(185, 240, 183));
+	--md-sys-color-secondary: light-dark(rgb(82, 99, 80), rgb(185, 204, 180));
+	--md-sys-color-on-secondary: light-dark(rgb(255, 255, 255), rgb(36, 52, 36));
+	--md-sys-color-secondary-container: light-dark(rgb(213, 232, 208), rgb(58, 75, 57));
+	--md-sys-color-on-secondary-container: light-dark(rgb(58, 75, 57), rgb(213, 232, 208));
+	--md-sys-color-tertiary: light-dark(rgb(57, 101, 107), rgb(161, 206, 213));
+	--md-sys-color-on-tertiary: light-dark(rgb(255, 255, 255), rgb(0, 54, 60));
+	--md-sys-color-tertiary-container: light-dark(rgb(188, 235, 242), rgb(31, 77, 83));
+	--md-sys-color-on-tertiary-container: light-dark(rgb(31, 77, 83), rgb(188, 235, 242));
+	--md-sys-color-error: light-dark(rgb(186, 26, 26), rgb(255, 180, 171));
+	--md-sys-color-on-error: light-dark(rgb(255, 255, 255), rgb(105, 0, 5));
+	--md-sys-color-error-container: light-dark(rgb(255, 218, 214), rgb(147, 0, 10));
+	--md-sys-color-on-error-container: light-dark(rgb(147, 0, 10), rgb(255, 218, 214));
+	--md-sys-color-background: light-dark(rgb(247, 251, 242), rgb(16, 20, 16));
+	--md-sys-color-on-background: light-dark(rgb(24, 29, 24), rgb(224, 228, 219));
+	--md-sys-color-surface: light-dark(rgb(247, 251, 242), rgb(16, 20, 16));
+	--md-sys-color-on-surface: light-dark(rgb(24, 29, 24), rgb(224, 228, 219));
+	--md-sys-color-surface-variant: light-dark(rgb(222, 229 217), rgb(66, 73, 64));
+	--md-sys-color-on-surface-variant: light-dark(rgb(66, 73, 64), rgb(194, 201, 189));
+	--md-sys-color-outline: light-dark(rgb(114, 121, 111), rgb(140, 147, 136));
+	--md-sys-color-outline-variant: light-dark(rgb(194, 201, 189), rgb(66, 73, 64));
+	--md-sys-color-shadow: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));
+	--md-sys-color-scrim: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));
+	--md-sys-color-inverse-surface: light-dark(rgb(45, 50, 44), rgb(224, 228, 219));
+	--md-sys-color-inverse-on-surface: light-dark(rgb(238, 242, 233), rgb(45, 50, 44));
+	--md-sys-color-inverse-primary: light-dark(rgb(158, 212, 157), rgb(56, 105, 60));
+	--md-sys-color-primary-fixed: light-dark(rgb(185, 240, 183), rgb(185, 240, 183));
+	--md-sys-color-on-primary-fixed: light-dark(rgb(0, 33, 6), rgb(0, 33, 6));
+	--md-sys-color-primary-fixed-dim: light-dark(rgb(158, 212, 157), #9ed49d);
+	--md-sys-color-on-primary-fixed-variant: light-dark(rgb(32 80 38), rgb(32 80 38));
+	--md-sys-color-secondary-fixed: light-dark(rgb(213, 232, 208), rgb(213, 232, 208));
+	--md-sys-color-on-secondary-fixed: light-dark(rgb(16, 31, 16), rgb(16, 31, 16));
+	--md-sys-color-secondary-fixed-dim: light-dark(rgb(185, 204, 180), rgb(185, 204, 180));
+	--md-sys-color-on-secondary-fixed-variant: light-dark(rgb(58, 75, 57), rgb(58, 75, 57));
+	--md-sys-color-tertiary-fixed: light-dark(rgb(188, 235, 242), rgb(188, 235, 242));
+	--md-sys-color-on-tertiary-fixed: light-dark(rgb(0, 31, 35), rgb(0, 31, 35));
+	--md-sys-color-tertiary-fixed-dim: light-dark(rgb(161, 206, 213), rgb(161, 206, 213));
+	--md-sys-color-on-tertiary-fixed-variant: light-dark(rgb(31, 77, 83), rgb(31, 77, 83));
+	--md-sys-color-surface-dim: light-dark(rgb(215, 219, 211), rgb(16, 20, 16));
+	--md-sys-color-surface-bright: light-dark(rgb(247, 251, 242), rgb(54, 58, 52));
+	--md-sys-color-surface-container-lowest: light-dark(rgb(255, 255, 255), rgb(11, 15, 11));
+	--md-sys-color-surface-container-low: light-dark(rgb(241, 245, 236), rgb(24, 29, 24));
+	--md-sys-color-surface-container: light-dark(rgb(235, 239, 230), rgb(28, 33, 27));
+	--md-sys-color-surface-container-high: light-dark(rgb(230, 233, 225), rgb(39, 43, 38));
+	--md-sys-color-surface-container-highest: light-dark(rgb(224, 228, 219), rgb(49, 54, 48));
+	--md-sys-color-disabled: light-dark(rgba(24, 29, 24, 0.12), rgba(224, 228, 219, 0.12));
+	--md-sys-color-text-disabled: light-dark(rgba(24, 29, 24, 0.38), rgba(224, 228, 219, 0.38));
+	--md-sys-color-box-shadow-in: light-dark(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3));
+	--md-sys-color-box-shadow-out: light-dark(rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.15));
+	--md-sys-color-subheadline: light-dark(rgba(24, 29, 24, 0.57), rgba(224, 228, 219, 0.57));
+	--md-sys-color-background-scrim: light-dark(rgba(247, 251, 242, 0.5), rgb(16, 20, 16, 0.5));
+	
+}
+
+.headline {
+	font-weight: bold;
+	font-size: 16px;
+}
+.headline_detail {
+	font-weight: bold;
+	font-size: 25px;
+	color: var(--md-sys-color-on-background);
+	
+}
+.subheadline {
+	margin-top: 6px;
+	font-size: 14px;
+	font-weight: 550;
+	color: var(--md-sys-color-subheadline);
+}
+
+.subheadline_detail {
+	margin-top: 12px;
+	font-size: 22px;
+	font-weight: 550;
+	color: var(--md-sys-color-subheadline);
+}
+/**/
