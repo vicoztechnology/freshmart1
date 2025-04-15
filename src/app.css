@@ -2,18 +2,20 @@
 @media (prefers-reduced-motion: no-preference) {
 	[style*='--tag'] {
 		view-transition-name: var(--tag);
+
 	}
 	
 }
 
 .detail {
 	margin-top: 80px;
+	margin-bottom: 50px;
 }
 
-.detail-image {
+.detail_image {
 	border-radius: 30px;
 }
-.detail-image img {
+.detail_image img {
 	border-radius: 30px;
 }
 .satuan {
@@ -69,16 +71,12 @@ a {
 	text-decoration: none;
 }
 .deskripsi {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
 	color: var(--md-sys-color-on-surface-variant);
 }
 
-.detail {
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 50px;
-}
+
 .home {
 	margin-top: 80px;
 	margin-bottom: 70px;
@@ -162,13 +160,7 @@ a {
 		animation: none !important;
 	}
 }
-:root::view-transition-old(*),
-:root::view-transition-new(*) {
 
-  animation-duration: 1s;
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-  
-}
 .chat-basket {
 	display: flex;
 	flex-direction: row;
@@ -181,7 +173,7 @@ a {
 	display: flex;
 	align-items: center;
 	position: fixed;
-	background-color: var(--md-sys-color-surface-container);
+	background-color: var(--md-sys-color-background);
 	padding-top: 10px;
 	padding-bottom: 5px;
 	justify-content: space-between;
@@ -329,6 +321,11 @@ a {
 	font-weight: 550;
 	color: var(--md-sys-color-subheadline);
 }
+.litle_text {
+	font-size:10px ;
+	color: var(--md-sys-color-subheadline);
+}
+
 
 .subheadline_detail {
 	margin-top: 12px;

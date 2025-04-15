@@ -21,14 +21,14 @@
 	
 		{@render children()}
 
-<!--
+
 	{#if (page.url.pathname.startsWith('/detail')) }
 		<p>home</p>
 		
 		{:else}
 		<Footer />
 	{/if}
--->
-	<Footer />
+
+
 	
 </div>
