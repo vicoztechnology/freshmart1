@@ -16,6 +16,22 @@
 			width="100%"
 		/>
 	</div>
+	<div class="list_kategori">
+		<ul class="ul_kategori">
+			{#each data.listkategori as item_kategori}
+				<li>
+					<div class="icon_kategori">
+						<img src={item_kategori.image} alt={item_kategori.nama_kategori} />
+					</div>
+
+					<div class="nama_kategori">{item_kategori.nama_kategori}</div>
+				</li>
+			{/each}
+		</ul>
+	</div>
+	<div class="hot_promo">
+		<div>Hot Promo</div>
+	</div>
 	<div class="items-container">
 		{#each data.items as item}
 			<div class="items-list">
@@ -50,6 +66,7 @@
 									viewBox="0 -960 960 960"
 									width="16px"
 									fill="var(--md-sys-color-primary)"
+									style:--tag="fav{item.kode_barang}"
 									><path
 										d="M480-170q-13 0-25.5-4.5T431-189l-59-54q-109-97-192.5-189.5T96-634q0-88 60-147t149-59q51 0 96.5 21.5T480-757q35-40 79.5-61.5T655-840q89 0 149 59t60 147q0 109-83.5 201.5T588-243l-59 54q-11 10-23.5 14.5T480-170Z"
 									/></svg
@@ -57,7 +74,7 @@
 
 								<div class="litle_text">520</div>
 							</div>
-							<div class="terjual litle_text">
+							<div class="terjual litle_text" style:--tag="terjual{item.kode_barang}">
 								10rb+ terjual
 							</div>
 						</div>
@@ -78,6 +95,28 @@
 </div>
 
 <style>
+	.icon_kategori img {
+		width: 50%;
+	}
+	.icon_kategori {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60px;
+		height: 60px;
+		background-color: var(--md-sys-color-surface-container-high);
+		text-align: center;
+		border-radius: 50%;
+		margin-bottom: 7px;
+	}
+
+	ul.ul_kategori {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 15px;
+	}
 	.favorite {
 		display: flex;
 		align-items: center;
@@ -94,5 +133,28 @@
 		display: flex;
 		align-items: center;
 		gap: 5px;
+	}
+	.list_kategori {
+		background-color: var(--md-sys-color-surface-container-lowest);
+		border-radius: 10px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		max-width: 500px;
+		overflow:scroll ;
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+		
+	}
+	.list_kategori::-webkit-scrollbar{
+		display: none;
+	}
+
+	
+	.nama_kategori {
+		text-align: center;
 	}
 </style>

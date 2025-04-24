@@ -8,7 +8,7 @@
 }
 
 .detail {
-	margin-top: 80px;
+	margin-top: 70px;
 	margin-bottom: 50px;
 }
 
@@ -245,6 +245,7 @@ a {
 	align-items: center;
 	width: 33.333%;
 }
+
 :root {
 	color-scheme: light dark;
 	--md-sys-color-primary: light-dark(rgb(56, 105, 60), rgb(158, 212, 157));
