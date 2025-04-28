@@ -1,41 +1,28 @@
 <script lang="ts">
-	import Listitems from './listitems.svelte';
-
 	import type { PageProps } from './$types';
 
-	import { fade } from 'svelte/transition';
 	let { data }: PageProps = $props();
+    let y: any;
 </script>
 
-<div class="home">
-	<div class="carousel">
-		<img
-			class="gambar"
-			src="https://rsud.bulelengkab.go.id/uploads/konten/32_manfaat-sayur-untuk-anak-menunjang-tumbuh-kembang-yang-optimal.jpg"
-			alt="gambar"
-			width="100%"
-		/>
-	</div>
-	<div class="list_kategori" style:--tag="listkategori">
-		<ul class="ul_kategori">
-			{#each data.listkategori as item_kategori}
-				<li>
-					<a href="/kategori">
+<div class="kategori_page">
+	<div class="head_kategori">
+		<div class="list_kategori" style:--tag="listkategori">
+			<ul class="ul_kategori">
+				{#each data.listkategori as item_kategori}
+					<li>
 						<div class="icon_kategori">
 							<img src={item_kategori.image} alt={item_kategori.nama_kategori} />
 						</div>
 
 						<div class="nama_kategori">{item_kategori.nama_kategori}</div>
-					</a>
-				</li>
-			{/each}
-		</ul>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</div>
-	<div class="hot_promo">
-		<div>Hot Promo</div>
-	</div>
-	<div class="items-container" style:--tag="listcontainer">
-		{#each data.items as item}
+	<div class="items-container list-container-kategori" style:--tag="listcontainer">
+		{#each data.listvegetable as item}
 			<div class="items-list">
 				<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
 					<div class="item-list-image">
@@ -95,23 +82,24 @@
 		{/each}
 	</div>
 </div>
-
+<svelte:window bind:scrollY={y} />
 <style>
-	.favorite {
-		display: flex;
-		align-items: center;
-		width: fit-content;
-		border: solid 1px;
-		border-radius: 4px;
-		padding-left: 2px;
-		padding-right: 2px;
-		background-color: var(--md-sys-color-secondary-container);
-		color: var(--md-sys-color-on-secondary-container);
-		margin-top: 2px;
+	.kategori_page {
+		margin-top: 60px;
 	}
-	.fav_terjual {
-		display: flex;
-		align-items: center;
-		gap: 5px;
+	.head_kategori {
+		background-color: var(--md-sys-color-background);
+		padding-left: 15px;
+        padding-right: 15px;
+		margin-left: 0px;
+      
+        z-index: 50;
 	}
+    .list_kategori{
+        max-width: 500px;
+    }
+    .list-container-kategori {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 </style>
