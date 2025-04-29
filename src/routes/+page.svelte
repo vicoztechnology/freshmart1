@@ -27,11 +27,12 @@
 				<li>
 					<a href="/kategori">
 						<div class="icon_kategori">
-							<img 
-							src={item_kategori.image} 
-							alt={item_kategori.nama_kategori}
-							width="25" 
-							height="25"/>
+							<img
+								src={item_kategori.image}
+								alt={item_kategori.nama_kategori}
+								width="25"
+								height="25"
+							/>
 						</div>
 
 						<div class="nama_kategori">{item_kategori.nama_kategori}</div>
@@ -40,8 +41,7 @@
 			{/each}
 		</ul>
 	</div>
-	<p>update6</p>
-	<!--
+
 	<div class="hot_promo">
 		<div>Hot Promo</div>
 	</div>
@@ -54,7 +54,8 @@
 							class="object-cover"
 							src={item.image}
 							alt="gambar ${item.nama_barang}"
-							width="100%"
+							width={(innerWidth - 40)/2}
+							height={(innerWidth - 40)/2}
 							style:--tag="gambar{item.kode_barang}"
 						/>
 					</div>
@@ -105,7 +106,6 @@
 			</div>
 		{/each}
 	</div>
-	-->
 </div>
 
 <style>
