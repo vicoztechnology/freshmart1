@@ -10,7 +10,7 @@
 </script>
 <svelte:window bind:innerWidth bind:innerHeight/>
 <div class="home">
-	<p>{innerWidth}</p>
+	
 	
 	<div class="carousel" style="width:{innerWidth-30};height:{(innerWidth-30)/2}" >
 		<img
@@ -22,8 +22,8 @@
 			
 		/>
 	</div>
-	<p>update2</p>
-	<!--
+	
+	
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
@@ -39,6 +39,8 @@
 			{/each}
 		</ul>
 	</div>
+	<p>update3</p>
+	<!--
 	<div class="hot_promo">
 		<div>Hot Promo</div>
 	</div>
