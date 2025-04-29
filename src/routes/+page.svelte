@@ -12,7 +12,7 @@
 <div class="home">
 	<p>{innerWidth}</p>
 	
-	<div class="carousel" >
+	<div class="carousel" style="width:{innerWidth-30};height:{(innerWidth-30)/2}" >
 		<img
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
@@ -22,7 +22,7 @@
 			
 		/>
 	</div>
-	<p>update</p>
+	<p>update2</p>
 	<!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
