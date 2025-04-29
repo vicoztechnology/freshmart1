@@ -40,7 +40,7 @@
 			{/each}
 		</ul>
 	</div>
-	<p>update5</p>
+	<p>update6</p>
 	<!--
 	<div class="hot_promo">
 		<div>Hot Promo</div>
