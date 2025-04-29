@@ -5,17 +5,21 @@
 
 	import { fade } from 'svelte/transition';
 	let { data }: PageProps = $props();
+	let innerWidth = $state(0);
+	let innerHeight = $state(0);
 </script>
-
+<svelte:window bind:innerWidth bind:innerHeight/>
 <div class="home">
 	<div class="carousel">
 		<img
 			class="gambar"
-			src="https://rsud.bulelengkab.go.id/uploads/konten/32_manfaat-sayur-untuk-anak-menunjang-tumbuh-kembang-yang-optimal.jpg"
+			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width="100%"
+			width={innerWidth-30}
+			
 		/>
 	</div>
+	<!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
@@ -94,6 +98,7 @@
 			</div>
 		{/each}
 	</div>
+	-->
 </div>
 
 <style>
