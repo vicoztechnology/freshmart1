@@ -3,7 +3,7 @@ const vegetables = [
 		kode_barang: 'vt001',
 		nama_barang: 'Wortel',
 		image:
-			'https://down-id.img.susercontent.com/file/681f75c3206945b48f5c56a015ebc259@resize_w900_nl.webp',
+			'https://ik.imagekit.io/dcjlghyytp1/cf86886e300e5e2ad793261782a9c4a4?tr=f-auto,w-120',
 		variant: [
 			{
 				satuan: '500 g',
@@ -38,7 +38,7 @@ const vegetables = [
 		kode_barang: 'vt002',
 		nama_barang: 'Pakcoy',
 		image:
-			'https://down-id.img.susercontent.com/file/bc89df793a5eae2c989782a12c240f0c@resize_w900_nl.webp',
+			'https://ik.imagekit.io/dcjlghyytp1/33757aa39c11ee9ed6244c4d115f4a7f?tr=f-auto,w-120',
 		variant: [
 			{
 				satuan: '500 g',
@@ -66,7 +66,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt003',
 		nama_barang:'Brokoli',
-		image: 'https://down-id.img.susercontent.com/file/dbf9be1f490798fce81843d3649de4c7@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/5ca752dc4c568c946eeb9893540fa626?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -94,7 +94,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt004',
 		nama_barang:'Bawang Putih',
-		image: 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m74fu81uomgd0a@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/ebc47e95b9e751721fedf1bba7d8a47f?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -122,7 +122,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt005',
 		nama_barang:'Beras Premium-Sania',
-		image: 'https://down-id.img.susercontent.com/file/id-11134207-7rbkc-m8lmrohsd1xp56@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/7f6441d76a4d62e2326bfa876d3172b3?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -150,7 +150,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt006',
 		nama_barang:'Apel Fuji',
-		image: 'https://down-id.img.susercontent.com/file/sg-11134201-7rbkj-ln4i7wgzi9f9ef@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/ccdc44261800ffc4011ba63771081576?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -178,7 +178,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt007',
 		nama_barang:'Strawberry',
-		image: 'https://down-id.img.susercontent.com/file/3cfa74ccea39eae4472e6de22b15b224@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/b5670694c0d5866207f8e98a10d192f3?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -206,7 +206,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt008',
 		nama_barang:'Kunyit',
-		image: 'https://down-id.img.susercontent.com/file/081fa57cd8291688a4547d9482883c19@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/ea3d42424e798f5a3c49632006dc3d43?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -234,7 +234,7 @@ const vegetables = [
 	{
 		kode_barang: 'vt009',
 		nama_barang:'Bawang Merah',
-		image: 'https://down-id.img.susercontent.com/file/id-11134207-7qul3-lgmeh54c3a9c4e@resize_w900_nl.webp',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/ec4854e50ed33bcfbd0a77687de6bea9?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
@@ -261,8 +261,8 @@ const vegetables = [
 	},
 	{
 		kode_barang: 'vt010',
-		nama_barang:'Sosis Sapi',
-		image: 'https://down-id.img.susercontent.com/file/f751c0d4d86e171369e3c12c6836fb7e@resize_w900_nl.webp',
+		nama_barang:'Sosis Ayam',
+		image: 'https://ik.imagekit.io/dcjlghyytp1/15d756be8f4e8c628310fb5310e741dd?tr=f-auto,w-120,dpr-2',
 		variant: [
 			{
 				satuan: '500 g',
