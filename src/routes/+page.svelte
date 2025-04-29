@@ -8,29 +8,30 @@
 	let innerWidth = $state(0);
 	let innerHeight = $state(0);
 </script>
-<svelte:window bind:innerWidth bind:innerHeight/>
+
+<svelte:window bind:innerWidth bind:innerHeight />
 <div class="home">
-	
-	
-	<div class="carousel" style="width:{innerWidth-30};height:{(innerWidth-30)/2}" >
+	<div class="carousel" style="width:{innerWidth - 30};height:{(innerWidth - 30) / 2}">
 		<img
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width={innerWidth-30}
-			height={(innerWidth-30)/2}
-			
+			width={innerWidth - 30}
+			height={(innerWidth - 30) / 2}
 		/>
 	</div>
-	
-	
+
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
 				<li>
 					<a href="/kategori">
 						<div class="icon_kategori">
-							<img src={item_kategori.image} alt={item_kategori.nama_kategori} />
+							<img 
+							src={item_kategori.image} 
+							alt={item_kategori.nama_kategori}
+							width="25" 
+							height="25"/>
 						</div>
 
 						<div class="nama_kategori">{item_kategori.nama_kategori}</div>
@@ -39,7 +40,7 @@
 			{/each}
 		</ul>
 	</div>
-	<p>update3</p>
+	<p>update4</p>
 	<!--
 	<div class="hot_promo">
 		<div>Hot Promo</div>
