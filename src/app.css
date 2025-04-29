@@ -361,6 +361,13 @@ ul.ul_kategori {
 	display: flex;
 	gap: 15px;
 }
+ul.ul_promo {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 15px;
+}
 .list_kategori {
 	background-color: var(--md-sys-color-surface-container-lowest);
 	border-radius: 10px;
@@ -375,11 +382,39 @@ ul.ul_kategori {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
+
+.hot_promo ul {
+
+	max-width: 500px;
+	overflow: scroll;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+.hot_promo{
+	background-color: var(--md-sys-color-secondary-container);
+	border-radius: 15px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 .list_kategori::-webkit-scrollbar {
 	display: none;
+}
+.title_promo {
+	font-weight: bold;
+	color: var(--md-sys-color-on-secondary-container);
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .nama_kategori {
 	text-align: center;
+}
+.hapus_harga {
+	text-decoration: line-through !important;
 }
 /**/

@@ -43,19 +43,51 @@
 	</div>
 
 	<div class="hot_promo">
-		<div>Hot Promo2</div>
+	<div class="title_promo">
+		<div class="">
+			Hot Promo
+		</div>
+		<div class="">Semuanya</div>
+	</div>
+		<ul class="ul_promo">
+			
+			{#each data.items as item}
+				<li>
+					<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
+						<div
+						class="item-list-image"
+						style="width:{(innerWidth - 40) / 4} ;height:{(innerWidth - 40) / 4};"
+					>
+						<img
+							class="object-cover"
+							src={item.image}
+							alt="gambar ${item.nama_barang}"
+							width={(innerWidth - 40) / 4}
+							height={(innerWidth - 40) / 4}
+							
+						/>
+						<div class="hapus_harga">Rp. 9.000</div>
+						<div class="">Rp. 6.000</div>
+					</div>
+					</a>
+				</li>
+			{/each}
+		</ul>
 	</div>
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
 			<div class="items-list">
 				<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
-					<div class="item-list-image" style="width:{(innerWidth - 40)/2} ;height:{(innerWidth - 40)/2};">
+					<div
+						class="item-list-image"
+						style="width:{(innerWidth - 40) / 2} ;height:{(innerWidth - 40) / 2};"
+					>
 						<img
 							class="object-cover"
 							src={item.image}
 							alt="gambar ${item.nama_barang}"
-							width={(innerWidth - 40)/2}
-							height={(innerWidth - 40)/2}
+							width={(innerWidth - 40) / 2}
+							height={(innerWidth - 40) / 2}
 							style:--tag="gambar{item.kode_barang}"
 						/>
 					</div>
