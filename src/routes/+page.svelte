@@ -43,13 +43,13 @@
 	</div>
 
 	<div class="hot_promo">
-		<div>Hot Promo</div>
+		<div>Hot Promo2</div>
 	</div>
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
 			<div class="items-list">
 				<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
-					<div class="item-list-image">
+					<div class="item-list-image" style="width:{(innerWidth - 40)/2} ;height:{(innerWidth - 40)/2};">
 						<img
 							class="object-cover"
 							src={item.image}
@@ -125,5 +125,8 @@
 		display: flex;
 		align-items: center;
 		gap: 5px;
+	}
+	.carousel {
+		background-color: red;
 	}
 </style>
