@@ -10,15 +10,19 @@
 </script>
 <svelte:window bind:innerWidth bind:innerHeight/>
 <div class="home">
-	<div class="carousel">
+	<p>{innerWidth}</p>
+	
+	<div class="carousel" >
 		<img
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
 			width={innerWidth-30}
+			height={(innerWidth-30)/2}
 			
 		/>
 	</div>
+	<p>update</p>
 	<!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
