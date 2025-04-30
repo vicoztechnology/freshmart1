@@ -20,7 +20,7 @@
 			height={(innerWidth - 30) / 2}
 		/>
 	</div>
-
+<!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
@@ -41,7 +41,8 @@
 			{/each}
 		</ul>
 	</div>
-
+-->
+	<!--
 	<div class="hot_promo">
 	<div class="title_promo">
 		<div class="">
@@ -74,6 +75,8 @@
 			{/each}
 		</ul>
 	</div>
+	-->
+	<!--
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
 			<div class="items-list">
@@ -138,6 +141,7 @@
 			</div>
 		{/each}
 	</div>
+	-->
 </div>
 
 <style>
