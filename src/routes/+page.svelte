@@ -18,12 +18,13 @@
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width={y}
+			width={(y-40)/2}
+			height={(y-40)/2}
 			
 		/>
 		
 	</div>
-	<p>update 2</p>
+	<p>update 3</p>
 <!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
