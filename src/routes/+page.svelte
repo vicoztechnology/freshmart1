@@ -18,8 +18,8 @@
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width={(y-40)/2}
-			height={(y-40)/2}
+			width={y-30}
+			height={(y-30)/2}
 			
 		/>
 		
