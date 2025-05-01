@@ -5,10 +5,15 @@
 	import type { PageProps } from './$types';
 
 	import { fade } from 'svelte/transition';
+	import { innerWidth, innerHeight } from 'svelte/reactivity/window';
+	
 	let { data }: PageProps = $props();
-	let innerWidth = $state(0);
-	let innerHeight = $state(0);
-	let y = $state(0);
+
+	let y:number= $state(0);
+	let lebar:number = y-30;
+	let tinggi:number=(y-30)/2
+ 
+
 </script>
 <svelte:window bind:innerWidth={y} />
 
@@ -18,13 +23,13 @@
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width={y-30}
-			height={(y-30)/2}
+			width={lebar}
+			height={tinggi}
 			
 		/>
 		
 	</div>
-	<p>update 3</p>
+	<p>update 5</p>
 <!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
