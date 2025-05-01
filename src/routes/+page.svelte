@@ -1,26 +1,29 @@
 <script lang="ts">
 	import Listitems from './listitems.svelte';
-
+	
+	
 	import type { PageProps } from './$types';
 
 	import { fade } from 'svelte/transition';
 	let { data }: PageProps = $props();
 	let innerWidth = $state(0);
 	let innerHeight = $state(0);
+	let y = $state(0);
 </script>
+<svelte:window bind:innerWidth={y} />
 
-<svelte:window bind:innerWidth bind:innerHeight />
 <div class="home">
 	<div class="carousel">
-		<img
+			<img
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width="500"
-			height="250"
+			width={y}
+			
 		/>
+		
 	</div>
-	<p>update 1</p>
+	<p>update 2</p>
 <!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
@@ -163,7 +166,5 @@
 		align-items: center;
 		gap: 5px;
 	}
-	.carousel {
-		background-color: red;
-	}
+	
 </style>
