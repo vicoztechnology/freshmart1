@@ -33,7 +33,7 @@
 	</div>
 
 	
-<!--
+
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
@@ -54,7 +54,7 @@
 			{/each}
 		</ul>
 	</div>
--->
+
 	<!--
 	<div class="hot_promo">
 	<div class="title_promo">
