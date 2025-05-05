@@ -31,9 +31,7 @@
 		/>
 		
 	</div>
-	<p>update fix</p>
-	<p>Lebar {lebar}</p>
-	<p>tinggi{tinggi}</p>
+
 	
 <!--
 	<div class="list_kategori" style:--tag="listkategori">
