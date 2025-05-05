@@ -10,12 +10,12 @@
 	let { data }: PageProps = $props();
 
 	let y:number= $state(0);
-	let lebar:number = y-30;
-	let tinggi:number=(y-30)/2
+    let lebar:number = innerWidth.current - 30 ;
+	let tinggi:number = (innerWidth.current - 30) /2 ;
  
 
 </script>
-<svelte:window bind:innerWidth={y} />
+
 
 <div class="home">
 	<div class="carousel">
@@ -30,6 +30,9 @@
 		
 	</div>
 	<p>update 5</p>
+	<p>{innerWidth.current}</p>
+	<p>{innerHeight.current}</p>
+	<p> Lebar = {lebar}</p>
 <!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
