@@ -10,10 +10,10 @@
 	let y = $state(0);
 	let lebar = $derived(y - 30);
 	let tinggi = $derived((y - 30) / 2);
-	let lebarpromo = $derived((y-40)/4);
-	let tinggipromo = $derived((y-40)/4);
-	let lebarlist = $derived((y-40)/2);
-	let tinggilist =$derived((y-40)/2);
+	let lebarpromo = $derived((y - 40) / 4);
+	let tinggipromo = $derived((y - 40) / 4);
+	let lebarlist = $derived((y - 40) / 2);
+	let tinggilist = $derived((y - 40) / 2);
 </script>
 
 <svelte:window bind:innerWidth={y} />
@@ -28,7 +28,7 @@
 			height={tinggi}
 		/>
 	</div>
-
+	<!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
@@ -49,7 +49,8 @@
 			{/each}
 		</ul>
 	</div>
-
+	-->
+	<!--
 	<div class="hot_promo">
 		<div class="title_promo">
 			<div class="">Hot Promo</div>
@@ -75,7 +76,8 @@
 			{/each}
 		</ul>
 	</div>
-
+	-->
+	<!--
 	
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
@@ -141,7 +143,7 @@
 			</div>
 		{/each}
 	</div>
-	
+-->
 </div>
 
 <style>
