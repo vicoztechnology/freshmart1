@@ -5,17 +5,19 @@
 	import type { PageProps } from './$types';
 
 	import { fade } from 'svelte/transition';
-	import { innerWidth, innerHeight } from 'svelte/reactivity/window';
+	
 	
 	let { data }: PageProps = $props();
 
-	let y:number= $state(0);
-    let lebar:number = innerWidth.current - 30 ;
-	let tinggi:number = (innerWidth.current - 30) /2 ;
+	let y = $state(0);
+    let lebar = $derived(y-30);
+	let tinggi = $derived((y-30)/2);
+ 
+
  
 
 </script>
-
+<svelte:window bind:innerWidth={y} />
 
 <div class="home">
 	<div class="carousel">
@@ -23,16 +25,16 @@
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width={lebar}
+			width= {lebar}
 			height={tinggi}
 			
 		/>
 		
 	</div>
-	<p>update 5</p>
-	<p>{innerWidth.current}</p>
-	<p>{innerHeight.current}</p>
-	<p> Lebar = {lebar}</p>
+	<p>update fix</p>
+	<p>Lebar {lebar}</p>
+	<p>tinggi{tinggi}</p>
+	
 <!--
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
