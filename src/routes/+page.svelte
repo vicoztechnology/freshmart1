@@ -1,38 +1,31 @@
 <script lang="ts">
 	import Listitems from './listitems.svelte';
-	
-	
+
 	import type { PageProps } from './$types';
 
 	import { fade } from 'svelte/transition';
-	
-	
+
 	let { data }: PageProps = $props();
 
 	let y = $state(0);
-    let lebar = $derived(y-30);
-	let tinggi = $derived((y-30)/2);
- 
-
- 
-
+	let lebar = $derived(y - 30);
+	let tinggi = $derived((y - 30) / 2);
+	let lebarpromo = $derived((y-40)/4);
+	let tinggipromo = $derived((y-40)/4)
 </script>
+
 <svelte:window bind:innerWidth={y} />
 
 <div class="home">
 	<div class="carousel">
-			<img
+		<img
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
-			width= {lebar}
+			width={lebar}
 			height={tinggi}
-			
 		/>
-		
 	</div>
-
-	
 
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
@@ -55,40 +48,32 @@
 		</ul>
 	</div>
 
-	<!--
 	<div class="hot_promo">
-	<div class="title_promo">
-		<div class="">
-			Hot Promo
+		<div class="title_promo">
+			<div class="">Hot Promo</div>
+			<div class="">Semuanya</div>
 		</div>
-		<div class="">Semuanya</div>
-	</div>
 		<ul class="ul_promo">
-			
 			{#each data.items as item}
 				<li>
 					<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
-						<div
-						class="item-list-image"
-						style="width:{(innerWidth - 40) / 4} ;height:{(innerWidth - 40) / 4};"
-					>
-						<img
-							class="object-cover"
-							src={item.image}
-							alt="gambar ${item.nama_barang}"
-							width={(innerWidth - 40) / 4}
-							height={(innerWidth - 40) / 4}
-							
-						/>
-						<div class="hapus_harga">Rp. 9.000</div>
-						<div class="">Rp. 6.000</div>
-					</div>
+						<div class="item-list-image">
+							<img
+								class="object-cover"
+								src={item.image}
+								alt="gambar ${item.nama_barang}"
+								width={lebarpromo}
+								height={tinggipromo}
+							/>
+							<div class="hapus_harga">Rp. 9.000</div>
+							<div class="">Rp. 6.000</div>
+						</div>
 					</a>
 				</li>
 			{/each}
 		</ul>
 	</div>
-	-->
+
 	<!--
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
@@ -175,5 +160,4 @@
 		align-items: center;
 		gap: 5px;
 	}
-	
 </style>
