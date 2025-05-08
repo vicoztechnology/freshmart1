@@ -1,9 +1,5 @@
 <script lang="ts">
-	import Listitems from './listitems.svelte';
-
 	import type { PageProps } from './$types';
-
-	import { fade } from 'svelte/transition';
 
 	let { data }: PageProps = $props();
 
@@ -20,14 +16,19 @@
 
 <div class="home">
 	<div class="carousel">
-		<img
-			fetchpriority="high"
-			class="gambar"
-			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
-			alt="gambar"
-			width={lebar}
-			height={tinggi}
-		/>
+		{#await data.listbanners}
+			<div class="gambar" style="width: {lebar};height:{tinggi};background-color:red">
+			</div>
+		{:then listbanners}
+			<img
+				fetchpriority="high"
+				class="gambar"
+				src="https://i.ibb.co.com/ksxnXMch/banner.webp"
+				alt="gambar"
+				width={lebar}
+				height={tinggi}
+			/>
+		{/await}
 	</div>
 	{#await data.items}
 		<p>Loading</p>
@@ -35,28 +36,27 @@
 		<p>Loading</p>
 		<p>Loading</p>
 		<p>Loading</p>
-		
-	{:then items } 
-	<div class="list_kategori" style:--tag="listkategori">
-		<ul class="ul_kategori">
-			{#each data.listkategori as item_kategori}
-				<li>
-					<a href="/kategori">
-						<div class="icon_kategori">
-							<img
-								src={item_kategori.image}
-								alt={item_kategori.nama_kategori}
-								width="25"
-								height="25"
-							/>
-						</div>
+	{:then items}
+		<div class="list_kategori" style:--tag="listkategori">
+			<ul class="ul_kategori">
+				{#each data.listkategori as item_kategori}
+					<li>
+						<a href="/kategori">
+							<div class="icon_kategori">
+								<img
+									src={item_kategori.image}
+									alt={item_kategori.nama_kategori}
+									width="25"
+									height="25"
+								/>
+							</div>
 
-						<div class="nama_kategori">{item_kategori.nama_kategori}</div>
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</div>
+							<div class="nama_kategori">{item_kategori.nama_kategori}</div>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	{/await}
 	<!--
 
@@ -155,6 +155,9 @@
 		{/each}
 	</div>
 -->
+	<div>
+		update
+	</div>
 </div>
 
 <style>
