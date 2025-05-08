@@ -58,10 +58,8 @@
 			</ul>
 		</div>
 	{/await}
-	<!--
 
-	-->
-	<!--
+	
 	<div class="hot_promo">
 		<div class="title_promo">
 			<div class="">Hot Promo</div>
@@ -87,8 +85,8 @@
 			{/each}
 		</ul>
 	</div>
-	-->
-	<!--
+	
+	
 	
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
@@ -154,7 +152,7 @@
 			</div>
 		{/each}
 	</div>
--->
+
 	<div>
 		update
 	</div>

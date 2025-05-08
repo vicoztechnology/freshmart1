@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import fadeScale from '$lib/animations';
 	import { cubicInOut } from 'svelte/easing';
-	import { BottomSheet } from 'svelte-bottom-sheet';
+	import {BottomSheet} from 'svelte-bottom-sheet'
 	let { data }: PageProps = $props();
 	let selected = $state(data.items[0].variant[0].harga);
 	let selectedsatuan = $state(data.items[0].variant[0].satuan);
@@ -94,9 +94,9 @@
 			<BottomSheet.Sheet
 				style="background-color:var(--md-sys-color-surface);max-width:500px;height:fit-content;"
 			>
-				<BottomSheet.Handle
-					style="background-color:var(--md-sys-color-on-surface-variant);"
-				></BottomSheet.Handle>
+				<BottomSheet.Handle style="background-color:var(--md-sys-color-surface);">
+					<BottomSheet.Grip style="background-color: var(--md-sys-color-on-surface-variant);" />
+				</BottomSheet.Handle>
 				<BottomSheet.Content style="background-color:var(--md-sys-color-surface);padding-left:0px">
 					<div class="content_sheet">
 						<div class="image_deskripsi_add_keranjang">
