@@ -21,6 +21,7 @@
 <div class="home">
 	<div class="carousel">
 		<img
+			fetchpriority="high"
 			class="gambar"
 			src="https://i.ibb.co.com/ksxnXMch/banner.webp"
 			alt="gambar"
@@ -28,7 +29,14 @@
 			height={tinggi}
 		/>
 	</div>
-	<!--
+	{#await data.items}
+		<p>Loading</p>
+		<p>Loading</p>
+		<p>Loading</p>
+		<p>Loading</p>
+		<p>Loading</p>
+		
+	{:then items } 
 	<div class="list_kategori" style:--tag="listkategori">
 		<ul class="ul_kategori">
 			{#each data.listkategori as item_kategori}
@@ -49,6 +57,9 @@
 			{/each}
 		</ul>
 	</div>
+	{/await}
+	<!--
+
 	-->
 	<!--
 	<div class="hot_promo">
