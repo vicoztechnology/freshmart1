@@ -2,9 +2,12 @@
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
-    let y: any;
+    let y = $state(0);
+	
+	let lebarlist = $derived((y - 40) / 2);
+	let tinggilist = $derived((y - 40) / 2);
 </script>
-
+<svelte:window bind:innerWidth={y} />
 <div class="kategori_page">
 	<div class="head_kategori">
 		<div class="list_kategori" style:--tag="listkategori">
@@ -30,7 +33,8 @@
 							class="object-cover"
 							src={item.image}
 							alt="gambar ${item.nama_barang}"
-							width="100%"
+							width={lebarlist}
+							height={tinggilist}
 							style:--tag="gambar{item.kode_barang}"
 						/>
 					</div>
@@ -82,7 +86,7 @@
 		{/each}
 	</div>
 </div>
-<svelte:window bind:scrollY={y} />
+
 <style>
 	.kategori_page {
 		margin-top: 60px;

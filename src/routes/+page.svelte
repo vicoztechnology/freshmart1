@@ -51,7 +51,7 @@
 								/>
 							</div>
 
-							<div class="nama_kategori">{item_kategori.nama_kategori}</div>
+							<div class="nama_kategori subheadline">{item_kategori.nama_kategori}</div>
 						</a>
 					</li>
 				{/each}
@@ -62,8 +62,8 @@
 	
 	<div class="hot_promo">
 		<div class="title_promo">
-			<div class="">Hot Promo</div>
-			<div class="">Semuanya</div>
+			<div class="subheadline">Hot Promo</div>
+			<div class="subheadline">Semuanya</div>
 		</div>
 		<ul class="ul_promo">
 			{#each data.items as item}
@@ -77,8 +77,8 @@
 								width={lebarpromo}
 								height={tinggipromo}
 							/>
-							<div class="hapus_harga">Rp. 9.000</div>
-							<div class="">Rp. 6.000</div>
+							<div class="hapus_harga subheadline">Rp. 9.000</div>
+							<div class="subheadline">Rp. 6.000</div>
 						</div>
 					</a>
 				</li>

@@ -24,7 +24,7 @@
 		bayar = jumlah * selected;
 	}
 </script>
-
+<svelte:window bind:innerWidth={y} />
 <div class="detail">
 	<BottomSheet settings={{ maxHeight: 0.7 }}>
 		<BottomSheet.Trigger>
