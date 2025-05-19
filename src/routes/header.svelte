@@ -1,6 +1,25 @@
 <script lang="ts">
 	import { page, navigating } from '$app/state';
 	import { getContext } from 'svelte';
+	import { browser } from '$app/environment';
+	const shareData = {
+		title: 'MDN',
+		text: 'Learn web development on MDN!',
+		url: 'https://developer.mozilla.org'
+	};
+	//functions
+	function nav_back() {
+		if (browser) window.history.back();
+	}
+	
+	async function share() {
+		try {
+			await navigator.share(shareData);
+			
+		} catch (err) {
+			
+		}
+	}
 </script>
 
 <header>
@@ -9,16 +28,18 @@
 			<div class="search-bar">
 				<div class="icon-search">
 					{#if page.url.pathname.startsWith('/detail')}
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							height="24px"
-							viewBox="0 -960 960 960"
-							width="24px"
-							fill="var(--md-sys-color-on-surface)"
-							><path
-								d="m313-440 196 196q12 12 11.5 28T508-188q-12 11-28 11.5T452-188L188-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l264-264q11-11 27.5-11t28.5 11q12 12 12 28.5T508-715L313-520h447q17 0 28.5 11.5T800-480q0 17-11.5 28.5T760-440H313Z"
-							/></svg
-						>
+						<button onclick={nav_back} aria-label="backpage" class="button_header">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="var(--md-sys-color-on-surface)"
+								><path
+									d="m313-440 196 196q12 12 11.5 28T508-188q-12 11-28 11.5T452-188L188-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l264-264q11-11 27.5-11t28.5 11q12 12 12 28.5T508-715L313-520h447q17 0 28.5 11.5T800-480q0 17-11.5 28.5T760-440H313Z"
+								/></svg
+							>
+						</button>
 					{:else}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -34,24 +55,25 @@
 				</div>
 
 				<div class="text-search">
-					{#if page.url.pathname.startsWith('/detail')}
-					{:else}
-					Cari kebutuhanmu di sini...
+					{#if page.url.pathname.startsWith('/detail')}{:else}
+						Cari kebutuhanmu di sini...
 					{/if}
-					</div>
+				</div>
 				<div class="rail-icon">
 					<div>
 						{#if page.url.pathname.startsWith('/detail')}
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								height="24px"
-								viewBox="0 -960 960 960"
-								width="24px"
-								fill="var(--md-sys-color-on-surface)"
-								><path
-									d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Z"
-								/></svg
-							>
+							<button onclick={share} aria-label="button share" class="button_header">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="24px"
+									viewBox="0 -960 960 960"
+									width="24px"
+									fill="var(--md-sys-color-on-surface)"
+									><path
+										d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Z"
+									/></svg
+								>
+							</button>
 						{:else}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -105,5 +127,9 @@
 	.rail-icon {
 		margin-right: 5px;
 		gap: 10px;
+	}
+	.button_header {
+		background-color: var(--md-sys-color-surface-container-high);
+		border: none;
 	}
 </style>
