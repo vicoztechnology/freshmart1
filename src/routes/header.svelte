@@ -11,21 +11,18 @@
 	function nav_back() {
 		if (browser) window.history.back();
 	}
-	
+
 	async function share() {
 		try {
 			await navigator.share(shareData);
-			
-		} catch (err) {
-			
-		}
+		} catch (err) {}
 	}
 </script>
 
 <header>
 	<div class="header_container">
 		<div class="header">
-			<div class="search-bar">
+			<div class="search-bar" style:--tag="pencarian">
 				<div class="icon-search">
 					{#if page.url.pathname.startsWith('/detail')}
 						<button onclick={nav_back} aria-label="backpage" class="button_header">
@@ -56,7 +53,7 @@
 
 				<div class="text-search">
 					{#if page.url.pathname.startsWith('/detail')}{:else}
-						Cari kebutuhanmu di sini...
+						<a href="/cari" aria-label="perncarian">Cari kebutuhanmu di sini...</a>
 					{/if}
 				</div>
 				<div class="rail-icon">
@@ -75,6 +72,22 @@
 								>
 							</button>
 						{:else}
+							<a href="/cari" aria-label="perncarian">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="24px"
+									viewBox="0 -960 960 960"
+									width="24px"
+									fill="var(--md-sys-color-on-surface)"
+									><path
+										d="M380-320q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l224 224q11 11 11 28t-11 28q-11 11-28 11t-28-11L532-372q-30 24-69 38t-83 14Zm0-80q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+									/></svg
+								>
+							</a>
+						{/if}
+					</div>
+					<div>
+						<div class="">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								height="24px"
@@ -82,22 +95,11 @@
 								width="24px"
 								fill="var(--md-sys-color-on-surface)"
 								><path
-									d="M380-320q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l224 224q11 11 11 28t-11 28q-11 11-28 11t-28-11L532-372q-30 24-69 38t-83 14Zm0-80q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+									d="M221-120q-27 0-48-16.5T144-179L42-549q-5-19 6.5-35T80-600h190l176-262q5-8 14-13t19-5q10 0 19 5t14 13l176 262h192q20 0 31.5 16t6.5 35L816-179q-8 26-29 42.5T739-120H221Zm259-160q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM367-600h225L479-768 367-600Z"
 								/></svg
 							>
-						{/if}
-					</div>
-					<div>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							height="24px"
-							viewBox="0 -960 960 960"
-							width="24px"
-							fill="var(--md-sys-color-on-surface)"
-							><path
-								d="M221-120q-27 0-48-16.5T144-179L42-549q-5-19 6.5-35T80-600h190l176-262q5-8 14-13t19-5q10 0 19 5t14 13l176 262h192q20 0 31.5 16t6.5 35L816-179q-8 26-29 42.5T739-120H221Zm259-160q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM367-600h225L479-768 367-600Z"
-							/></svg
-						>
+							<span class="badge-keranjang">10</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -106,6 +108,16 @@
 </header>
 
 <style>
+	.badge-keranjang {
+		border-radius: 50%;
+		padding: 2px 3px 2px 3px;
+		background-color: var(--md-sys-color-error);
+		color: var(--md-sys-color-on-error);
+		font-size: 10px;
+		position: relative;
+		left: -10px;
+		top: -15px;
+	}
 	.rail-icon {
 		display: flex;
 	}
