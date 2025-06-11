@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { page } from '$app/state';
+</script>
+
 <div class="saya">
 	<div class="avatar_akun">
 		<img src="/avatar.png" alt="foto akun" width="70" height="70" />
@@ -5,7 +9,12 @@
 	<div class=" nama_akun">Tofik Hidayat</div>
 	<div class="hp_akun">081225365200</div>
 	<div class="detail_akun">
-		<div class="akun">
+		<a
+			class="akun"
+			href="/saya/alamat"
+			aria-current={page.url.pathname === '/saya/alamat'}
+			aria-label="alamat saya"
+		>
 			<div class="icon_akun">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -32,9 +41,15 @@
 					/></svg
 				>
 			</div>
-		</div>
+		</a>
+
 		<hr />
-		<div class="akun">
+		<a
+			class="akun"
+			href="/saya/pengembalian"
+			aria-current={page.url.pathname === '/saya/pengembalian'}
+			aria-label="pengembalian dana"
+		>
 			<div class="icon_akun">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +76,14 @@
 					/></svg
 				>
 			</div>
-		</div>
+		</a>
 		<hr />
-		<div class="akun">
+		<a
+			class="akun"
+			href="/saya/blog"
+			aria-current={page.url.pathname === '/saya/blog'}
+			aria-label="blog"
+		>
 			<div class="icon_akun">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -90,16 +110,16 @@
 					/></svg
 				>
 			</div>
-		</div>
+		</a>
 		<hr />
-		<div class="akun">
+		<a
+			class="akun"
+			href="/saya/kebijakan"
+			aria-current={page.url.pathname === '/saya/kebijakan'}
+			aria-label="kebijakan"
+		>
 			<div class="icon_akun">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="M480-84q-7 0-13-1t-12-3q-135-45-215-166.5T160-516v-189q0-25 14.5-45t37.5-29l240-90q14-5 28-5t28 5l240 90q23 9 37.5 29t14.5 45v189q0 63-16.5 122.5T736-280L618-398q11-19 16.5-39.5T640-480q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47q21 0 41.5-5.5T560-342l129 128q-38 45-83.5 76.5T505-88q-6 2-12 3t-13 1Zm0-316q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Z"
 					/></svg
@@ -108,27 +128,22 @@
 			</div>
 
 			<div class="icon_link">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="M504-480 348-636q-11-11-11-28t11-28q11-11 28-11t28 11l184 184q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L404-268q-11 11-28 11t-28-11q-11-11-11-28t11-28l156-156Z"
 					/></svg
 				>
 			</div>
-		</div>
+		</a>
 		<hr />
-		<div class="akun">
+		<a
+			class="akun"
+			href="/saya/syarat"
+			aria-current={page.url.pathname === '/saya/syarat'}
+			aria-label="syarat dan ketentuan"
+		>
 			<div class="icon_akun">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm120-160h200q17 0 28.5-11.5T560-320q0-17-11.5-28.5T520-360H320q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm0-160h320q17 0 28.5-11.5T680-480q0-17-11.5-28.5T640-520H320q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160h320q17 0 28.5-11.5T680-640q0-17-11.5-28.5T640-680H320q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Zm160-190q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790Z"
 					/></svg
@@ -137,27 +152,22 @@
 			</div>
 
 			<div class="icon_link">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="M504-480 348-636q-11-11-11-28t11-28q11-11 28-11t28 11l184 184q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L404-268q-11 11-28 11t-28-11q-11-11-11-28t11-28l156-156Z"
 					/></svg
 				>
 			</div>
-		</div>
+		</a>
 		<hr />
-		<div class="akun">
+		<a
+			class="akun"
+			href="/saya/bantuan"
+			aria-current={page.url.pathname === '/saya/bantuan'}
+			aria-label="bantuan"
+		>
 			<div class="icon_akun">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm2 160q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm4-572q25 0 43.5 16t18.5 40q0 22-13.5 39T502-525q-23 20-40.5 44T444-427q0 14 10.5 23.5T479-394q15 0 25.5-10t13.5-25q4-21 18-37.5t30-31.5q23-22 39.5-48t16.5-58q0-51-41.5-83.5T484-720q-38 0-72.5 16T359-655q-7 12-4.5 25.5T368-609q14 8 29 5t25-17q11-15 27.5-23t34.5-8Z"
 					/></svg
@@ -166,24 +176,28 @@
 			</div>
 
 			<div class="icon_link">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="M504-480 348-636q-11-11-11-28t11-28q11-11 28-11t28 11l184 184q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L404-268q-11 11-28 11t-28-11q-11-11-11-28t11-28l156-156Z"
 					/></svg
 				>
 			</div>
-		</div>
+		</a>
 		<hr />
-		
 	</div>
 </div>
 
 <style>
+	a {
+		cursor: default;
+		text-decoration: none;
+	}
+	.icon_link > svg {
+		fill: var(--md-sys-color-on-background);
+	}
+	.icon_akun > svg {
+		fill: var(--md-sys-color-on-background);
+	}
 	.isi_link {
 		margin-left: 12px;
 	}
