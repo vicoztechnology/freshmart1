@@ -7,7 +7,29 @@
 		<img src="/avatar.png" alt="foto akun" width="70" height="70" />
 	</div>
 	<div class=" nama_akun">Tofik Hidayat</div>
-	<div class="hp_akun">081225365200</div>
+	<div class="voucher_poin">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			height="20px"
+			viewBox="0 -960 960 960"
+			width="20px"
+			fill="var(--md-sys-color-tertiary)"
+			><path
+				d="M843-399 562-117q-11 11-24 16t-27 5q-14 0-27-5t-24-16L116.7-460.3Q106-471 101-483.89T96-511v-281q0-29.7 21.15-50.85Q138.3-864 168-864h281q13.91 0 26.96 5 13.04 5 23.77 15.7L843-500q11 11 16 23.5t5 26.5q0 14-5.02 27.09Q853.96-409.83 843-399ZM264-636q25 0 42.5-17.5T324-696q0-25-17.5-42.5T264-756q-25 0-42.5 17.5T204-696q0 25 17.5 42.5T264-636Zm272 341 111-111q10-10 15-22.96 5-12.97 5-27.66Q667-486 647.39-507q-19.61-21-47.39-21-20.36 0-40.18 12T511-473q-31.87-32.08-49.94-43.54Q443-528 423-528q-28.61 0-48.8 20.78Q354-486.44 354-457q0 14 5.69 27.54Q365.38-415.93 375-406l111 111q10.64 11 24.82 11T536-295Z"
+			/></svg
+		>
+		&nbsp;5 Voucher &nbsp; &nbsp;
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			height="20px"
+			viewBox="0 -960 960 960"
+			width="20px"
+			fill="var(--md-sys-color-primary-point)"
+			><path
+				d="M480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm-1-120q14 0 24-9t10-23v-15q49-8 80.5-42t31.5-80q0-45-29-78t-83-52q-57-20-78-36t-21-41q0-20 18-33t47-13q19 0 34 6t25 17q10 12 22.5 16t23.5-1q13-6 17.5-18t-2.5-23q-15-23-37.5-37T513-697v-15q0-14-9.5-23t-23.5-9q-14 0-23.5 9t-9.5 23v15q-45 11-72 40t-27 66q0 43 29 74t98 57q50 19 68 35.5t18 39.5q0 26-21 44t-52 18q-26 0-47.5-13T407-372q-7-12-19.5-17t-24.5 0q-14 5-19 18t1 25q16 31 42.5 52.5T446-264v16q0 14 9.5 23t23.5 9Z"
+			/></svg
+		>&nbsp;1.500 Point
+	</div>
 	<div class="detail_akun">
 		<a
 			class="akun"
@@ -16,12 +38,7 @@
 			aria-label="alamat saya"
 		>
 			<div class="icon_akun">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="24px"
-					viewBox="0 -960 960 960"
-					width="24px"
-					fill="#1f1f1f"
+				<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
 					><path
 						d="m574-129-214-75-186 72q-10 4-19.5 2.5T137-136q-8-5-12.5-13.5T120-169v-561q0-13 7.5-23t20.5-15l186-63q6-2 12.5-3t13.5-1q7 0 13.5 1t12.5 3l214 75 186-72q10-4 19.5-2.5T823-824q8 5 12.5 13.5T840-791v561q0 13-7.5 23T812-192l-186 63q-6 2-12.5 3t-13.5 1q-7 0-13.5-1t-12.5-3Zm-14-89v-468l-160-56v468l160 56Z"
 					/></svg
@@ -192,11 +209,14 @@
 		cursor: default;
 		text-decoration: none;
 	}
+	.isi_link {
+		color: var(--md-sys-color-on-background);
+	}
 	.icon_link > svg {
-		fill: var(--md-sys-color-on-background);
+		fill: var(--md-sys-color-primary);
 	}
 	.icon_akun > svg {
-		fill: var(--md-sys-color-on-background);
+		fill: var(--md-sys-color-primary);
 	}
 	.isi_link {
 		margin-left: 12px;
@@ -215,6 +235,8 @@
 		margin-top: 15px;
 		margin-left: 15px;
 		margin-right: 15px;
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
 	.avatar_akun {
 		height: 70px;
@@ -233,9 +255,12 @@
 		font-size: 12px;
 		margin-top: 5px;
 	}
-	.hp_akun {
+	.voucher_poin{
+		display: flex;
 		text-align: center;
 		font-size: 12px;
 		margin-top: 5px;
+		align-items: center;
+		justify-content: center;
 	}
 </style>
