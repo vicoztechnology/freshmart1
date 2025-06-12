@@ -205,6 +205,9 @@
 </div>
 
 <style>
+	hr {
+		color: var(--md-sys-color-outline-variant)
+	}
 	a {
 		cursor: default;
 		text-decoration: none;
@@ -225,6 +228,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	.icon_akun {
 		display: flex;
@@ -232,11 +237,10 @@
 	}
 	.detail_akun {
 		font-size: 12px;
-		margin-top: 15px;
+		margin-top: 25px;
 		margin-left: 15px;
 		margin-right: 15px;
-		padding-top: 25px;
-		padding-bottom: 25px;
+		
 	}
 	.avatar_akun {
 		height: 70px;
