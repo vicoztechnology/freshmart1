@@ -10,6 +10,11 @@
 	let tinggipromo = $derived((y - 40) / 4);
 	let lebarlist = $derived((y - 40) / 2);
 	let tinggilist = $derived((y - 40) / 2);
+	import { setContext } from 'svelte';
+
+	// Retrieve user store from context
+	setContext('user','kirimdata');
+	
 </script>
 
 <svelte:window bind:innerWidth={y} />
@@ -17,8 +22,7 @@
 <div class="home">
 	<div class="carousel">
 		{#await data.listbanners}
-			<div class="gambar" style="width: {lebar};height:{tinggi};background-color:red">
-			</div>
+			<div class="gambar" style="width: {lebar};height:{tinggi};background-color:red"></div>
 		{:then listbanners}
 			<img
 				fetchpriority="high"
@@ -59,7 +63,6 @@
 		</div>
 	{/await}
 
-	
 	<div class="hot_promo">
 		<div class="title_promo">
 			<div class="subheadline">Hot Promo</div>
@@ -85,17 +88,12 @@
 			{/each}
 		</ul>
 	</div>
-	
-	
-	
+
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
 			<div class="items-list">
 				<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
-					<div
-						class="item-list-image"
-						style="width:{lebarlist} ;height:{tinggilist};"
-					>
+					<div class="item-list-image" style="width:{lebarlist} ;height:{tinggilist};">
 						<img
 							class="object-cover"
 							src={item.image}
@@ -153,9 +151,7 @@
 		{/each}
 	</div>
 
-	<div>
-		update
-	</div>
+	<div>update</div>
 </div>
 
 <style>

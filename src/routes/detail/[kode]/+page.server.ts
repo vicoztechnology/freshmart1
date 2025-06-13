@@ -6,7 +6,8 @@ import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({params}) => {
 	return {
-		items: vegetables.filter((d)=> d.kode_barang ===params.kode).map((res) => res)
+		items: vegetables.filter((d)=> d.kode_barang ===params.kode).map((res) => res),
+		nama:"Detail Barang"
 	};
 	
 };

@@ -9,6 +9,7 @@ export const load: PageServerLoad = async () => {
 		items:vegetables,
 		listkategori:kategoris,
 		listbanners:banners,
+		nama:"Detail Barang"
 	};
 };
 
