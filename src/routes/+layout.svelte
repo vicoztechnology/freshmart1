@@ -96,7 +96,7 @@
 									></svg
 								>
 							{:else}
-								<div>{page.data.nama}</div>
+								<div>{page.data.title}</div>
 							{/if}
 
 							<!--

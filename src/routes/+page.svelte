@@ -91,7 +91,7 @@
 
 	<div class="items-container" style:--tag="listcontainer">
 		{#each data.items as item}
-			<div class="items-list">
+			<div class="card">
 				<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
 					<div class="item-list-image" style="width:{lebarlist} ;height:{tinggilist};">
 						<img

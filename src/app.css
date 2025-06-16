@@ -23,7 +23,7 @@
 	font-size: 10px;
 	color: var(--md-sys-color-subheadline);
 }
-.items-list {
+.card {
 	background-color: var(--md-sys-color-surface-container-low);
 	border-radius: 12px;
 	color: var(--md-sys-color-on-surface);
