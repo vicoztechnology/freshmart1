@@ -5,6 +5,7 @@ import type { PageServerLoad } from './$types';
 export const load: PageServerLoad = async () => {
     return {
     
-        title:"Metode Pengembalian Dana"
+        title:"Metode Pengembalian Dana",
+        footer:"hidden"
     };
 };

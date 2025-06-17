@@ -1,7 +1,7 @@
 <div class="page_alamat">
 	<ul class="no-bullets">
-		<li class="card card_alamat">
-			<div class="">Tofik Hidayat</div>
+		<li class="card_alamat">
+			<div class="nama_akun">Tofik Hidayat</div>
 			<div class="">Kabupaten Banyumas</div>
 			<label><input name="plan" class="radio" type="radio" checked /></label>
 			<div class="">Kecamatan Purwokerto Selatan</div>
@@ -13,8 +13,8 @@
 				<button class="btnedithapus btnalamathapus">Hapus</button>
 			</div>
 		</li>
-		<li class="card card_alamat">
-			<div class="">Nurul Hidayati</div>
+		<li class="card_alamat">
+			<div class="nama_akun">Nurul Hidayati</div>
 			<div class="">Kabupaten Banyumas</div>
 			<label><input name="plan" class="radio" type="radio" /></label>
 			<div class="">Kecamatan Purwokerto Timur</div>
@@ -26,8 +26,8 @@
 				<button class="btnedithapus btnalamathapus">Hapus</button>
 			</div>
 		</li>
-		<li class="card card_alamat">
-			<div class="">Nurul Hidayati</div>
+		<li class="card_alamat">
+			<div class="nama_akun">Nurul Hidayati</div>
 			<div class="">Kabupaten Banyumas</div>
 			<label><input name="plan" class="radio" type="radio" /></label>
 			<div class="">Kecamatan Purwokerto Timur</div>
@@ -41,8 +41,70 @@
 		</li>
 	</ul>
 </div>
+<div class="alamat_footer">
+	<div class="btn_alamat btn_tambahalamat">
+		<button type="button" class="tambahalamatbtn">Tambah Alamat </button>
+	</div>
+	<div class="btn_alamat btn_pilihalamat">
+		<button type="button" class="pilihalamatbtn">Pilih Alamat </button>
+	</div>
+</div>
 
 <style>
+	.tambahalamatbtn {
+		
+		border-radius: 25px;
+		background-color: var(--md-sys-color-background);
+		border: solid var(--md-sys-color-primary);
+		font-size: 14px;
+		font-weight: bold;
+		width: 85%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		
+	}
+		.pilihalamatbtn {
+		
+		border-radius: 25px;
+		background-color: var(--md-sys-color-primary);
+		border: none;
+		color: var(--md-sys-color-on-primary);
+		font-size: 14px;
+		font-weight: bold;
+		width: 85%;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		
+	}
+	.btn_alamat {
+		width: 50%;
+		text-align: center;
+		
+	}
+	.btn_pilihalamat {
+	
+	}
+	.btn_tambahalamat {
+		
+	}
+	.alamat_footer {
+		bottom: 0;
+		width: 100%;
+		max-width: 500px;
+		position: fixed;
+		background-color: var(--md-sys-color-background);
+		padding-top: 10px;
+		padding-bottom: 5px;
+		border: none;
+		z-index: 40;
+		display: flex;
+		margin-bottom: 10px;
+	}
+	.nama_akun {
+		font-size: 14px;
+		font-weight: bolder;
+	}
 	input[type='radio']:checked {
 		accent-color: #232323;
 	}
@@ -62,7 +124,7 @@
 		font-size: 14px;
 		font-weight: bold;
 		padding: 10px 10px 10px 10px;
-		background-color: var(--md-sys-color-surface-container-low);
+		background-color: var(--md-sys-color-background);
 	}
 	.page_alamat {
 		margin-top: 70px;
@@ -75,11 +137,19 @@
 		padding: 0;
 	}
 	.card_alamat {
-		padding-top: 12px;
-		padding-left: 12px;
-		padding-bottom: 12px;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-bottom: 5px;
+		padding-right: 20px;
 		margin-bottom: 20px;
 		font-size: 12px;
+		background-color: var(--md-sys-color-surface);
+		border-radius: 25px;
+		color: var(--md-sys-color-on-surface);
+	
+		border:solid var(--md-sys-color-outline-variant);
+
+	
 	}
 	.radio {
 		float: right;
