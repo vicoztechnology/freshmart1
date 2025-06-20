@@ -59,8 +59,8 @@
 		font-size: 14px;
 		font-weight: bold;
 		width: 85%;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding-top: 13px;
+		padding-bottom: 13px;
 
 		
 	}
@@ -73,8 +73,8 @@
 		font-size: 14px;
 		font-weight: bold;
 		width: 85%;
-		padding-top: 17px;
-		padding-bottom: 17px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 		
 	}
 	.btn_alamat {

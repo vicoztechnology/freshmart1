@@ -2,9 +2,7 @@
 @media (prefers-reduced-motion: no-preference) {
 	[style*='--tag'] {
 		view-transition-name: var(--tag);
-
 	}
-	
 }
 
 .detail {
@@ -76,7 +74,6 @@ a {
 	color: var(--md-sys-color-on-surface-variant);
 }
 
-
 .home {
 	margin-top: 80px;
 	margin-bottom: 70px;
@@ -96,11 +93,11 @@ a {
 .gambar {
 	border-radius: 30px;
 }
-.background-icon>svg {
+.background-icon > svg {
 	fill: var(--md-sys-color-on-secondary-container);
 }
 
-.isi_footer_detail>svg {
+.isi_footer_detail > svg {
 	fill: var(--md-sys-color-on-primary);
 }
 .label-nav {
@@ -127,14 +124,14 @@ a {
 		&[aria-current]:not([aria-current='false']) {
 			& .background-icon {
 				animation-duration: 0.5s;
-				transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+				transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 				animation-name: example;
 				background-color: var(--md-sys-color-secondary-container);
 			}
 			& .label-nav {
 				animation-name: nama-men;
 				animation-duration: 0.5s;
-				transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+				transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 				font-weight: 600;
 			}
 		}
@@ -210,7 +207,6 @@ a {
 	z-index: 50;
 	pointer-events: auto;
 	object-fit: cover;
-
 }
 .blok {
 	bottom: 0;
@@ -256,7 +252,7 @@ a {
 
 :root {
 	color-scheme: light dark;
-	--md-sys-color-primary-point:light-dark(rgb(219 198 110), rgb(219 198 110));
+	--md-sys-color-primary-point: light-dark(rgb(219 198 110), rgb(219 198 110));
 	--md-sys-color-primary: light-dark(rgb(56, 105, 60), rgb(158, 212, 157));
 	--md-sys-color-surface-tint: light-dark(rgb(56, 105, 60), rgb(158 212 157));
 	--md-sys-color-on-primary: light-dark(rgb(255, 255, 255), rgb(4, 57, 18));
@@ -312,7 +308,6 @@ a {
 	--md-sys-color-box-shadow-out: light-dark(rgba(0, 0, 0, 0.15), rgba(255, 255, 255, 0.15));
 	--md-sys-color-subheadline: light-dark(rgba(24, 29, 24, 0.57), rgba(224, 228, 219, 0.57));
 	--md-sys-color-background-scrim: light-dark(rgba(247, 251, 242, 0.5), rgb(16, 20, 16, 0.5));
-	
 }
 
 .headline {
@@ -323,7 +318,6 @@ a {
 	font-weight: bold;
 	font-size: 25px;
 	color: var(--md-sys-color-on-background);
-	
 }
 .subheadline {
 	margin-top: 6px;
@@ -333,10 +327,9 @@ a {
 	text-decoration: none;
 }
 .litle_text {
-	font-size:10px ;
+	font-size: 10px;
 	color: var(--md-sys-color-subheadline);
 }
-
 
 .subheadline_detail {
 	margin-top: 12px;
@@ -344,7 +337,7 @@ a {
 	font-weight: 550;
 	color: var(--md-sys-color-subheadline);
 }
-.kategori_page{
+.kategori_page {
 	margin-top: 75px;
 	margin-left: 0px;
 	margin-right: 0px;
@@ -392,15 +385,18 @@ ul.ul_promo {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
-
+ul.no-bullets {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 .hot_promo ul {
-
 	max-width: 500px;
 	overflow: scroll;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 }
-.hot_promo{
+.hot_promo {
 	background-color: var(--md-sys-color-secondary-container);
 	border-radius: 15px;
 	margin-top: 10px;
@@ -426,5 +422,49 @@ ul.ul_promo {
 }
 .hapus_harga {
 	text-decoration: line-through !important;
+}
+
+.radio {
+	float: right;
+	margin-right: 12px;
+}
+
+input[type='radio'] {
+	--s: 1.5em; /* control the size */
+	--c: #009688; /* the active color */
+
+	height: var(--s);
+	aspect-ratio: 1;
+	border: calc(var(--s) / 8) solid #939393;
+	padding: calc(var(--s) / 8);
+	background: radial-gradient(farthest-side, var(--md-sys-color-primary) 94%, #0000) 50%/0 0
+		no-repeat content-box;
+	border-radius: 50%;
+	outline-offset: calc(var(--s) / 10);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	font-size: inherit;
+	transition: 0.3s;
+}
+input[type='radio']:checked {
+	border-color: var(--md-sys-color-primary);
+	background-size: 100% 100%;
+}
+
+input[type='radio']:disabled {
+	background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+@media print {
+	input[type='radio'] {
+		-webkit-appearance: auto;
+		-moz-appearance: auto;
+		appearance: auto;
+		background: none;
+	}
 }
 /**/
