@@ -2,6 +2,9 @@
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+
+	
+
 </script>
 
 <div class="page_blog">
@@ -10,10 +13,10 @@
 			<li>
 				<a href={`blog/${isiblog.kode_blog}`}>
 					<div class="listblog">
-						<div class="gambarisiblog"><img src="/kale.jpg" alt="kale" /></div>
+						<div class="gambarisiblog" ><img src="/kale.jpg" alt="kale" style:--tag="blog{isiblog.kode_blog}"/></div>
 						<div class="isiblog">
-							<div class="judulparagraf">{isiblog.judul_blog}</div>
-							<div class="paragraf width ellipse two-lines">
+							<div class="judulparagraf" style:--tag="judulblog{isiblog.kode_blog}">{isiblog.judul_blog}</div>
+							<div class="paragraf width ellipse two-lines" style:--tag="isiblog{isiblog.kode_blog}">
 								{@html isiblog.isi_blog}
 							</div>
 						</div>

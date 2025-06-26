@@ -7,7 +7,7 @@ import type { PageServerLoad } from './$types'
 export const load: PageServerLoad = async ({params}) => {
     return {
         listblogs: blogs.filter((d)=> d.kode_blog ===params.kode).map((res) => res),
-        title:"Detail Blog"
+        title:"Isi Blog"
     };
     
 };
