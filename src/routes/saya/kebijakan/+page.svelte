@@ -11,7 +11,9 @@
 		telah mencapai usia minimal 18 tahun. Jika Anda berusia dibawah 18 tahun, Anda akan menyatakan
 		bahwa Anda telah memperoleh izin dari orang tua atau wali hukum anda
 	</p>
-
+<p>
+    Anda menyatakan bahwa dengan menyetujui Syarat dan Ketentuan mamimuna.com, Maka anda telah dianggap
+</p>
 </div>
 
 <style>
@@ -22,5 +24,6 @@
 		margin-top: 70px;
 		margin-left: 20px;
 		margin-right: 20px;
+		font-size: 12px;
 	}
 </style>

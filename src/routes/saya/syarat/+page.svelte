@@ -26,5 +26,6 @@
 		margin-top: 70px;
 		margin-left: 20px;
 		margin-right: 20px;
+		font-size: 12px;
 	}
 </style>

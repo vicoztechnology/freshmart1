@@ -22,14 +22,18 @@
 	color: var(--md-sys-color-subheadline);
 }
 .card {
-	background-color: var(--md-sys-color-surface-container-low);
+	border-style: solid;
 	border-radius: 12px;
+	border-color: var(--md-sys-color-outline-variant) ;
+	/*
+	background-color: var(--md-sys-color-surface-container-low);
 	color: var(--md-sys-color-on-surface);
 
 	box-shadow:
 		var(--md-sys-color-box-shadow-in) 0px 1px 2px 0px,
 		var(--md-sys-color-box-shadow-out) 0px 2px 6px 2px;
-}
+*/
+		}
 .uraian-barang {
 	color: var(--md-sys-color-on-surface);
 	margin-top: 4px;

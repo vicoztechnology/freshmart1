@@ -131,11 +131,7 @@
 		margin-left: 20px;
 		margin-right: 20px;
 	}
-	ul.no-bullets {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-	}
+
 	.card_alamat {
 		padding-top: 20px;
 		padding-left: 20px;
@@ -151,47 +147,5 @@
 
 	
 	}
-	.radio {
-		float: right;
-		margin-right: 12px;
-	}
-
-	input[type='radio'] {
-		--s: 1.5em; /* control the size */
-		--c: #009688; /* the active color */
-
-		height: var(--s);
-		aspect-ratio: 1;
-		border: calc(var(--s) / 8) solid #939393;
-		padding: calc(var(--s) / 8);
-		background: radial-gradient(farthest-side, var(--md-sys-color-primary) 94%, #0000) 50%/0 0
-			no-repeat content-box;
-		border-radius: 50%;
-		outline-offset: calc(var(--s) / 10);
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		cursor: pointer;
-		font-size: inherit;
-		transition: 0.3s;
-	}
-	input[type='radio']:checked {
-		border-color: var(--md-sys-color-primary);
-		background-size: 100% 100%;
-	}
-
-	input[type='radio']:disabled {
-		background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	@media print {
-		input[type='radio'] {
-			-webkit-appearance: auto;
-			-moz-appearance: auto;
-			appearance: auto;
-			background: none;
-		}
-	}
+	
 </style>

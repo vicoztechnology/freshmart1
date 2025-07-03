@@ -26,7 +26,7 @@
 	</div>
 	<div class="items-container list-container-kategori" style:--tag="listcontainer">
 		{#each data.listvegetable as item}
-			<div class="items-list">
+			<div class="card">
 				<a href={`/detail/${item.kode_barang}`} aria-label="detail" aria-current="location">
 					<div class="item-list-image">
 						<img

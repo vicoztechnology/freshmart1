@@ -32,6 +32,7 @@
 		margin-left: 20px;
 		margin-right: 20px;
 		padding-left: 5px;
+		font-size:12px;
 	}
 	img {
 		float: left;
