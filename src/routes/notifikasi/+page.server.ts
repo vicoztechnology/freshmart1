@@ -9,15 +9,9 @@ export const load: PageServerLoad = async () => {
 		items:vegetables,
 		listkategori:kategoris,
 		listbanners:banners,
-		title:"Akun Saya",
-		footer:"visible",
-		home:"visible",
+		title:"Notifikasi",
+		footer:"hidden",
+		home:"hidden",
 	
 	};
 };
-
-
-
-
-
-

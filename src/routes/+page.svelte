@@ -43,7 +43,7 @@
 			<ul class="ul_kategori">
 				{#each data.listkategori as item_kategori}
 					<li>
-						<a href="/kategori">
+						<a href={`/kategori/${item_kategori.kode_kategori}`}>
 							<div class="icon_kategori">
 								<img
 									src={item_kategori.image}

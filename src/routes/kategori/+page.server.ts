@@ -6,6 +6,9 @@ import vegetables from '$lib/list';
 export const load: PageServerLoad = async () => {
 	return {
 	    listvegetable:vegetables,
-		listkategori:kategoris
+		listkategori:kategoris,
+		title:"Kategori",
+		footer:"hidden",
+		home:"hidden"
 	};
 };

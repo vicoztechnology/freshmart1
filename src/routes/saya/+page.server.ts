@@ -6,6 +6,8 @@ export const load: PageServerLoad = async () => {
 	return {
 	
 		title:"Akun Saya",
-		footer:"visible"
+		footer:"hidden",
+		home:"hidden"
+		
 	}
 };

@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import fadeScale from '$lib/animations';
 	import { cubicInOut } from 'svelte/easing';
-	import {BottomSheet} from 'svelte-bottom-sheet'
+	import { BottomSheet } from 'svelte-bottom-sheet';
 	let { data }: PageProps = $props();
 	let selected = $state(data.items[0].variant[0].harga);
 	let selectedsatuan = $state(data.items[0].variant[0].satuan);
@@ -175,7 +175,9 @@
 						<br />
 					</div>
 					<div class="detail_footer">
-						<button type="button" class="btn_detail keranjang"> Tambah Ke Keranjang </button>
+						<BottomSheet.Trigger>
+							<button type="button" class="btn_detail keranjang"> Tambah Ke Keranjang </button>
+						</BottomSheet.Trigger>
 					</div>
 				</BottomSheet.Content>
 			</BottomSheet.Sheet>
