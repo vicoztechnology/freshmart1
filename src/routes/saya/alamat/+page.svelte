@@ -1,9 +1,9 @@
-<div class="page_alamat">
+<div class="page_alamat" >
 	<ul class="no-bullets">
-		<li class="card_alamat">
-			<div class="nama_akun">Tofik Hidayat</div>
-			<div class="">Kabupaten Banyumas</div>
-			<label><input name="plan" class="radio" type="radio" checked /></label>
+		<li class="card_alamat" style:--tag="alamat1">
+			<div class="nama_akun" style:--tag="nama_alamat1">Tofik Hidayat</div>
+			<div class="" style:--tag="kabupaten_alamat1">Kabupaten Banyumas</div>
+			<label style:--tag="radio_alamat1"><input name="plan" class="radio" type="radio" checked /></label>
 			<div class="">Kecamatan Purwokerto Selatan</div>
 			<div class="">Kelurahan Tanjung</div>
 			<div class="">Jl Meranti 1 No 101 RT 05 RW 07</div>
@@ -13,8 +13,8 @@
 				<button class="btnedithapus btnalamathapus">Hapus</button>
 			</div>
 		</li>
-		<li class="card_alamat">
-			<div class="nama_akun">Nurul Hidayati</div>
+		<li class="card_alamat" style:--tag="alamat2">
+			<div class="nama_akun" style:--tag="nama_alamat2">Nurul Hidayati</div>
 			<div class="">Kabupaten Banyumas</div>
 			<label><input name="plan" class="radio" type="radio" /></label>
 			<div class="">Kecamatan Purwokerto Timur</div>
@@ -26,8 +26,8 @@
 				<button class="btnedithapus btnalamathapus">Hapus</button>
 			</div>
 		</li>
-		<li class="card_alamat">
-			<div class="nama_akun">Nurul Hidayati</div>
+		<li class="card_alamat" style:--tag="alamat3">
+			<div class="nama_akun" style:--tag="nama_alamat3">Nurul Hidayati</div>
 			<div class="">Kabupaten Banyumas</div>
 			<label><input name="plan" class="radio" type="radio" /></label>
 			<div class="">Kecamatan Purwokerto Timur</div>

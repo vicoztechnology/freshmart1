@@ -1,4 +1,4 @@
-<div class="page_pengembalian">
+<div class="page_pengembalian" style:--tag="pengembalian">
 	<ol class="ketentuan">
 		<li>Pengembalian dana akan dilakukan sesuai metode pembayaran pada transaksi anda</li>
 		<li>

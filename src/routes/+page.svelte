@@ -10,9 +10,6 @@
 	let tinggipromo = $derived((y - 40) / 4);
 	let lebarlist = $derived((y - 40) / 2);
 	let tinggilist = $derived((y - 40) / 2);
-
-
-	
 </script>
 
 <svelte:window bind:innerWidth={y} />
@@ -148,8 +145,6 @@
 			</div>
 		{/each}
 	</div>
-
-	
 </div>
 
 <style>

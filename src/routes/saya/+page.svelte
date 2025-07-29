@@ -44,6 +44,41 @@
 					/></svg
 				>
 				<div class="isi_link">Alamat</div>
+
+				<div class="page_alamat" style:--tag="alamat">
+					<ul class="no-bullets">
+						<li class="card_alamat" style:--tag="alamat1">
+							<div class="nama_akun" style:--tag="nama_alamat1"></div>
+							<div class="" style:--tag="kabupaten_alamat1"></div>
+
+							<div class=""></div>
+							<div class=""></div>
+							<div class=""></div>
+							<hr />
+							<div class="editalamat"></div>
+						</li>
+						<li class="card_alamat" style:--tag="alamat2">
+							<div class="nama_akun" style:--tag="nama_alamat2"></div>
+							<div class=""></div>
+
+							<div class=""></div>
+							<div class=""></div>
+							<div class=""></div>
+							<hr />
+							<div class="editalamat"></div>
+						</li>
+						<li class="card_alamat" style:--tag="alamat3">
+							<div class="nama_akun" style:--tag="nama_alamat3"></div>
+							<div class=""></div>
+
+							<div class=""></div>
+							<div class=""></div>
+							<div class=""></div>
+							<hr />
+							<div class="editalamat"></div>
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<div class="icon_link">
@@ -79,6 +114,21 @@
 					/></svg
 				>
 				<div class="isi_link">Metode Pengembalian Dana</div>
+				<div class="page_pengembalian" style:--tag="pengembalian">
+					<div class="ketentuan">
+						
+					</div>
+
+					<div class="metode"></div>
+					<div class="no-bullet">
+						<div class="metode_list">
+						
+						</div>
+						<div class="metode_list">
+					
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="icon_link">
@@ -206,7 +256,7 @@
 
 <style>
 	hr {
-		color: var(--md-sys-color-outline-variant)
+		color: var(--md-sys-color-outline-variant);
 	}
 	a {
 		cursor: default;
@@ -240,7 +290,6 @@
 		margin-top: 25px;
 		margin-left: 15px;
 		margin-right: 15px;
-		
 	}
 	.avatar_akun {
 		height: 70px;
@@ -259,7 +308,7 @@
 		font-size: 12px;
 		margin-top: 5px;
 	}
-	.voucher_poin{
+	.voucher_poin {
 		display: flex;
 		text-align: center;
 		font-size: 12px;
