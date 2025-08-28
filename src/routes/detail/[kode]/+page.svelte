@@ -309,7 +309,7 @@
 		padding-left: 7px;
 		padding-right: 7px;
 		border-width: 1px;
-		background-color: var(--md-sys-color-tertiary-container);
-		color: var(--md-sys-color-on-tertiary-container);
+		background-color: var(--md-sys-color-surface-container-low);
+		color: var(--md-sys-color-on-surface);
 	}
 </style>
